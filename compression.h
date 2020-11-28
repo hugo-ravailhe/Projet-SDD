@@ -9,6 +9,8 @@ Node* AddAVLOccurence(Node* B, char c, int* change);
 ListNode* CreationListOccurence(char* tab);
 
 ///Création Arbre Huffman pour AVL
+void BubbleSort(ListNode **L);
+
 Node* CreationABRHuffman(ListNode *L);
 
 ///AVL Dictionnaire

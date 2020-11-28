@@ -13,6 +13,4 @@ ListNode* Recuperation(ListNode **L);
 
 ListNode* CopyListNode(ListNode *L);
 
-void BubbleSort(ListNode **L);
-
 #endif //MAIN_C_FONCTIONS_H

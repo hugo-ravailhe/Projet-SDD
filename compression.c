@@ -21,6 +21,10 @@ ListNode* CreationListOccurence(char* tab){
 }
 
 ///Création Arbre Huffman pour AVL
+void BubbleSort(ListNode **L){
+
+}
+
 Node* CreationABRHuffman(ListNode *L){
 
 }
