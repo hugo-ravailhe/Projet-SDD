@@ -7,6 +7,10 @@ int get_size(char *filename);
 
 void ReadTxt(char* txt, char* path);
 
+char* LetterToBinary(char* tab,int* len,char letter);
+
+char* WordToBinary(char* text,char* tab);
+
 int Maximum(int a, int b);
 
 ListNode* Recuperation(ListNode **L);

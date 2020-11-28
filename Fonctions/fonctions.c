@@ -15,6 +15,14 @@ void ReadTxt(char* txt, char* path){
 
 }
 
+char* LetterToBinary(char* tabtest,int* len,char lettre){
+
+}
+
+char* WordToBinary(char* text,char* tabtest){
+
+}
+
 int Maximum(int a, int b) {
 
 }
