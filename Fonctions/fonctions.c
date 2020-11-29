@@ -44,54 +44,42 @@ void ReadTxt(char* txt, char* path){
     }
 }
 
-char* LetterToBinary(char* tab, int* len, char lettre){
-    *len=8;
-
+char* LetterToBinary(char lettre, char *tab, int length){
     int x;
-    tab = (char*) malloc((*len+1) * sizeof(char));
-    char tabfinal[8];
-
     x = lettre;
-    int cpt=*len-1;
-    while (x!=0){
-
-        if(x%2==0){
-            tabfinal[cpt]='0';
+    int cpt = 1;
+    tab = realloc(tab, length);
+    while (x != 0){
+        if(x%2 == 0){
+            tab[length - cpt] = '0';
         }
-        if(x%2!=0){
-            tabfinal[cpt]='1';
-            printf("\n LAAAAA%c\n",tabfinal[cpt]);
+        if(x%2 != 0){
+            tab[length - cpt] = '1';
+            printf("\n LAAAAA%c\n",tab[cpt]);
         }
-        x=x/2;
-        cpt--;
-
-    }
-
-    for (cpt;cpt>=0;cpt--){
-        tabfinal[cpt]='0';
-        printf("test01\n");
-    }
-    tabfinal[*len]='\0';
-    WriteTxtWithoutSupp(tabfinal, "binary.txt");
-
-    return tabfinal;
-}
-
-char* WordToBinary(char* text,char* tab){
-    int x;
-    int len=0;
-    int cpt=0;
-    while(text[cpt]!='\0'){
-        tab = LetterToBinary(tab,&len,text[cpt]);
+        x = x/2;
         cpt++;
 
     }
+    for (;cpt < 9;cpt++){
+        tab[length - cpt]='0';
+        printf("test01\n");
+    }
+    return tab;
+}
 
-    tab = (char*) malloc((len+1) * sizeof(char));
-
-    tab[len]='\0';
-
-    return  tab;
+char* WordToBinary(const char* text){
+    int cpt = 0;
+    int length = 0;
+    char *tab = NULL;
+    while(text[cpt] != '\0'){
+        length += 8;
+        tab = LetterToBinary(text[cpt], tab, length);
+        cpt++;
+    }
+    tab = realloc(tab, length + 1);
+    tab[length] = '\0';
+    return tab;
 }
 
 int Maximum(int a, int b) {

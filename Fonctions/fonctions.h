@@ -7,9 +7,9 @@ int get_size(char *filename);
 
 void ReadTxt(char* txt, char* path);
 
-char* LetterToBinary(char* tab,int* len,char letter);
+char* LetterToBinary(char letter, char *tab, int length);
 
-char* WordToBinary(char* text,char* tab);
+char* WordToBinary(const char* text);
 
 int Maximum(int a, int b);
 
