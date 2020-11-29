@@ -158,7 +158,7 @@ NodeCode* AddAVLDico(NodeCode* B, char c, Code* code, int* changement){
         else if (B->data < c)
             B->right = AddAVLDico(B->right, c, code,changement);
         if (*changement == 1)
-            B = Balancing(B);
+            B = BalancingCode(B);
         return B;
     }
 }
@@ -235,6 +235,7 @@ Code* DicoAVLToBinary(NodeCode* B) {
         }
         return K;
     }
+    return NULL;
 }
 
 char* EncodeDico(NodeCode* B){
@@ -266,7 +267,6 @@ void Compression(char* txt){
 
         ///Arbre Huffman
         B = CreationABRHuffman(Occu);
-        PrintABR(B);
         printf("Success: Arbre Huffman\n");
 
         ///Dictionnaire
@@ -278,7 +278,7 @@ void Compression(char* txt){
         printf("Success: Encodage texte\n");
 
         ///Exportation des fichiers
-        char huffmanpath[] = "dico.txt";
+        char huffmanpath[] = "huffman.txt";
         WriteTxt(bin, huffmanpath);
         char* dico = EncodeDico(C);
         char dicopath[] = "dico.txt";
