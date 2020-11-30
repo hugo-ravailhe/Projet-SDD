@@ -1,3 +1,10 @@
+/*****************************************************************//**
+ * \file   fonctions.h
+ * \brief  file for the fonctions.
+ * 
+ * \author Groupe 2 - R
+ * \date   November 2020
+ *********************************************************************/
 #ifndef MAIN_C_FONCTIONS_H
 #define MAIN_C_FONCTIONS_H
 /**
