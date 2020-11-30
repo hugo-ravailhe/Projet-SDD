@@ -1,6 +1,6 @@
 /*****************************************************************//**
  * \file   decompression.h
- * \brief  
+ * \brief  Fichier pour les fonctions de decompression
  * 
  * \author Groupe 2 - R
  * \date   November 2020
