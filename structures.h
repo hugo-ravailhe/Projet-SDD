@@ -1,3 +1,10 @@
+/*****************************************************************//**
+ * \file   structures.h
+ * \brief  Fichier pour les structures
+ *
+ * \author Groupe 2 - R
+ * \date   November 2020
+ *********************************************************************/
 #ifndef TEST_STRUCTURES_H
 #define TEST_STRUCTURES_H
 

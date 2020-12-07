@@ -9,10 +9,10 @@
 #define TEST_DECOMPRESSION_H
 
 /**
- * \brief Fonction pour créer un arbre Huffman à partir d'un Dico sous forme de texte.
- * \param dico est un tableau de caratères, contenant le dico.
+ * \brief Fonction pour crï¿½er un arbre Huffman ï¿½ partir d'un Dico sous forme de texte.
+ * \param dico est un tableau de caratï¿½res, contenant le dico.
  * \param i est un pointeur d'entier, qui indique la position dans le tableau.
- * \param B est un pointeur de Node, contenant le tableau Huffman qui se crée.
+ * \param B est un pointeur de Node, contenant le tableau Huffman qui se crï¿½e.
  *         \n Example :
  *         \code{.c}
  *         Node *B = CreationHuffmanTreeByDico(dico, &i, letter, B);
@@ -22,8 +22,8 @@
 Node* CreationHuffmanTreeByDico(const char* dico, int *i, char c, Node *B);
 
 /**
- * \brief Fonction qui décode le dico sous forme d'un texte en arbre Huffman.
- * \param dico est un tableau de caratères, contenant le dico.
+ * \brief Fonction qui dï¿½code le dico sous forme d'un texte en arbre Huffman.
+ * \param dico est un tableau de caratï¿½res, contenant le dico.
  *         \n Example :
  *         \code{.c}
  *         Node *B = DecodeDico(dico);
@@ -32,22 +32,22 @@ Node* CreationHuffmanTreeByDico(const char* dico, int *i, char c, Node *B);
 Node* DecodeDico(const char* dico);
 
 /**
- * \brief Fonction qui retourne le caratère qui correspond au chemin donné en paramètre.
+ * \brief Fonction qui retourne le caratï¿½re qui correspond au chemin donnï¿½ en paramï¿½tre.
  * \param B est un pointeur de Node, contenant l'arbre Huffman.
- * \param binary est un tableau de caractères, contenant le texte à décoder.
+ * \param binary est un tableau de caractï¿½res, contenant le texte ï¿½ dï¿½coder.
  * \param i est un pointeur d'entier, qui indique la position dans le tableau.
  *         \n Example :
  *         \code{.c}
  *         char letter = HuffmanChar(B, dico, &i);
  *         \endcode
- * \return un caractère, associé au chemin.
+ * \return un caractï¿½re, associï¿½ au chemin.
  */
 char HuffmanChar(Node *B, char* binary, int *i);
 
 /**
- * \brief Fonction qui retourne le texte décoder.
+ * \brief Fonction qui retourne le texte dï¿½coder.
  * \param B est un pointeur de Node, contenant l'arbre Huffman.
- * \param binary un tableau de caratères, contenant le texte à décoder.
+ * \param binary un tableau de caratï¿½res, contenant le texte ï¿½ dï¿½coder.
  *         \n Example :
  *         \code{.c}
  *         char *txt = DecodeBinary(B, binary);
@@ -56,14 +56,16 @@ char HuffmanChar(Node *B, char* binary, int *i);
 char* DecodeBinary(Node *B, char* binary);
 
 /**
- * \brief Fonction qui permet de décompresser un texte binaire.
- * \param bin est un tableau de caractères, contenant le texte binaire à décompresser.
- * \param dico est un tableau de caractères, contenant le dico de la compression.
+ * \brief Fonction qui permet de dï¿½compresser un texte binaire.
+ * \param bin est un tableau de caractï¿½res, contenant le texte binaire ï¿½ dï¿½compresser.
+ * \param dico est un tableau de caractï¿½res, contenant le dico de la compression.
+ * \param path est un tableau de caracteres, contenant le chemin des fichiers.
+ * \param last est un entier, contenant la taille de path.
  *         \n Example :
  *         \code{.c}
- *         Decompression(bin, dico);
+ *         Decompression(bin, dico, "H:\\Huffman\\", 11);
  *         \endcode
  */
-void Decompression(char* bin, char* dico);
+void Decompression(char* bin, char* dico, char* path, int last);
 
 #endif //TEST_DECOMPRESSION_H

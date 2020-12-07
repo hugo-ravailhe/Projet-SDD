@@ -10,10 +10,8 @@
 void WriteTxt(char* txt, char* path){
     FILE *filepath = NULL;
     filepath = fopen(path,"w+");
-    if (filepath != NULL){
-        fprintf(filepath,"%s\n",txt);
-        fclose(filepath);
-    }
+    fprintf(filepath,"%s\n",txt);
+    fclose(filepath);
 }
 
 void WriteTxtWithoutSupp(char* txt, char* path){
@@ -22,6 +20,9 @@ void WriteTxtWithoutSupp(char* txt, char* path){
     if (filepath != NULL){
         fprintf(filepath,"%s\n",txt);
         fclose(filepath);
+    }
+    else{
+        printf("Fichier introuvable\n");
     }
 }
 
@@ -55,7 +56,6 @@ char* LetterToBinary(char lettre, char *tab, int length){
         }
         if(x%2 != 0){
             tab[length - cpt] = '1';
-            printf("\n LAAAAA%c\n",tab[cpt]);
         }
         x = x/2;
         cpt++;
@@ -63,7 +63,6 @@ char* LetterToBinary(char lettre, char *tab, int length){
     }
     for (;cpt < 9;cpt++){
         tab[length - cpt]='0';
-        printf("test01\n");
     }
     return tab;
 }
@@ -107,4 +106,24 @@ ListNode* CopyListNode(ListNode *L){
         }
     }
     return K;
+}
+
+char *Concatenation(const char *first, int firstlength, const char *second, int secondlength){
+    int i = 0;
+    char *output = (char*)malloc((firstlength + secondlength + 2) *sizeof(char));
+    if (first != NULL){
+        for (i; i < firstlength; i++){
+            output[i] = first[i];
+        }
+        i++;
+    }
+    i--;
+    if (second != NULL){
+        for (int j = 0; j < secondlength; j++){
+            output[i] = second[j];
+            i++;
+        }
+    }
+    output[firstlength + secondlength] = '\0';
+    return output;
 }
