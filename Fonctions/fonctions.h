@@ -30,13 +30,13 @@ void ReadTxt(char* txt, char* path);
 * \param letter: the letter translated into binary.
 * \return the tab with the binary.
  */
-char* LetterToBinary(char* tab,int* len,char letter);
+char* LetterToBinary(char lettre, char *tab, int length);
 /**
 * \brief function that starts the function LetterToBinary for as many letters as there are in the texte.
 * \param text: the text you want to translate into binary.
 * \return tab.
  */
-char* WordToBinary(char* text,char* tab);
+char* WordToBinary(const char* text);
 /**
 * \brief function that function which calculates the maximum between two integers.
 * \param a: the first integer.
@@ -58,5 +58,7 @@ ListNode* Recuperation(ListNode **L);
 * \return the list.
  */
 ListNode* CopyListNode(ListNode *L);
+
+char *Concatenation(const char *first, int firstlength, const char *second, int secondlength);
 
 #endif //MAIN_C_FONCTIONS_H
