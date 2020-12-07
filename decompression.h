@@ -59,9 +59,11 @@ char* DecodeBinary(Node *B, char* binary);
  * \brief Fonction qui permet de d�compresser un texte binaire.
  * \param bin est un tableau de caract�res, contenant le texte binaire � d�compresser.
  * \param dico est un tableau de caract�res, contenant le dico de la compression.
+ * \param path est un tableau de caracteres, contenant le chemin des fichiers.
+ * \param last est un entier, contenant la taille de path.
  *         \n Example :
  *         \code{.c}
- *         Decompression(bin, dico);
+ *         Decompression(bin, dico, "H:\\Huffman\\", 11);
  *         \endcode
  */
 void Decompression(char* bin, char* dico, char* path, int last);
