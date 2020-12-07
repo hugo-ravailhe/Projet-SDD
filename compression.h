@@ -169,6 +169,6 @@ char* EncodeDico(NodeCode* B);
  *         Compression("texte a compresser");
  *         \endcode
  */
-void Compression(char* txt);
+void Compression(char* txt, char *input, int last);
 
 #endif //TEST_COMPRESSION_H
