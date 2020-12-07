@@ -7,12 +7,14 @@
  *********************************************************************/
 #ifndef MAIN_C_CREATION_H
 #define MAIN_C_CREATION_H
+
 /**
  * \brief function that create a list with a char as data.
  * \param c: the char put in the list as data.
  * \return the list.
  */
 List* CreationList(char c);
+
 /**
  * \brief function that create a Node with a char as data and and his occu.
  * \param c: the char put in the Node as data.
@@ -20,6 +22,7 @@ List* CreationList(char c);
  * \return the node.
  */
 Node* CreationNode(char c, int occu);
+
 /**
  * \brief function that create a Node with a char as data and and his occu.
  * \param c: the char put in the Node as data.
@@ -27,12 +30,14 @@ Node* CreationNode(char c, int occu);
  * \return the node.
  */
 ListNode* CreationListNode(char c, int occu);
+
 /**
  * \brief function that create a list of code with a char as data.
  * \param c: the char put in the list as data.
  * \return the list of code.
  */
 ListCode* CreationListCode(char c, Code* code);
+
 /**
  * \brief function that create a node of code with a char as data.
  * \param c: the char put in the node as data.
@@ -40,6 +45,7 @@ ListCode* CreationListCode(char c, Code* code);
  * \return the node of code.
  */
 NodeCode* CreationNodeCode(char c, Code* code);
+
 /**
  * \brief function that create a code.
  * \param c: the char put in the code as data.
