@@ -68,8 +68,11 @@ char* DecodeBinary(Node *B, char* binary){
     return txt;
 }
 
-void Decompression(char* bin, char* dico){
+void Decompression(char* bin, char* dico, char* path, int last){
     Node *D = DecodeDico(dico);
+    printf("Success: Creation de l'arbre Huffman\n");
     char *txt = DecodeBinary(D, bin);
-    WriteTxt(txt, "txtdecompress.txt");
+    printf("Success: Decompression\n");
+    WriteTxt(txt, Concatenation(path, last, "txtdecompress.txt", 17));
+    printf("Success: Exportation des fichiers\n");
 }

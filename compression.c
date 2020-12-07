@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "structures.h"
 #include "compression.h"
 #include "Fonctions/creation.h"
@@ -254,7 +255,7 @@ char* EncodeDico(NodeCode* B){
 }
 
 ///AVL Compression
-void Compression(char* txt){
+void Compression(char* txt, char *input, int last){
     if (*txt != '\0'){
         ///Initialisation
         ListNode *Occu = NULL;
@@ -278,11 +279,9 @@ void Compression(char* txt){
         printf("Success: Encodage texte\n");
 
         ///Exportation des fichiers
-        char huffmanpath[] = "huffman.txt";
-        WriteTxt(bin, huffmanpath);
+        WriteTxt(bin, Concatenation(input, last,"huffman.txt", 11));
         char* dico = EncodeDico(C);
-        char dicopath[] = "dico.txt";
-        WriteTxt(dico, dicopath);
+        WriteTxt(dico, Concatenation(input, last,"dico.txt", 8));
         printf("Success: Exportation des fichiers\n");
     } else{
         printf("Failed\n");
