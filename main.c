@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <io.h>
+#include <time.h>
 #include "structures.h"
 #include "compression.h"
 #include "decompression.h"
@@ -20,11 +21,14 @@ int main(){
         printf("Donnez votre reponse: ");
         scanf("%d",&choix);
         printf("-----------------------------------------------------------------------------------\n");
+        float temps;
+        clock_t t1, t2;
 
         if(choix == 1){
             printf("Inserez le chemin du fichier a compresser: (ex: H:\\\\Document\\\\fichier_a_compresser.txt)\n");
             char *input = (char*)malloc(200*sizeof(char));
             scanf("%s", input);
+            t1 = clock();
             char *tabtxt = NULL;
             int length = get_size(input);
             tabtxt = realloc(tabtxt, length);
@@ -42,6 +46,12 @@ int main(){
             WriteTxt(txtbinary, Concatenation(input, last + 9, "binary.txt\0", 11));
             free(txtbinary);
             Compression(tabtxt, input, last + 9);
+            t2 = clock();
+            temps = (float)(t2-t1)/CLOCKS_PER_SEC;
+            printf("Taille: %d caracteres\n", length);
+            int lengthcompress = get_size(Concatenation(input, last + 9, "huffman.txt", 11));
+            printf("Ratio: %lf\n", (float)lengthcompress / (float)(length*8));
+            printf("temps = %f Seconde(s)\n", temps);
             printf("Le dossier Huffman contenant les fichiers de compression se trouve dans le meme repertoire que le choisi.\n");
             printf("-----------------------------------------------------------------------------------\n\n");
         }
@@ -50,6 +60,7 @@ int main(){
             printf("Inserez le chemin du fichier a decompresser: (ex: H:\\\\Document\\\\Huffman\\\\huffman.txt)\n");
             char *huffmanpath = (char*)malloc(200*sizeof(char));
             scanf("%s", huffmanpath);
+            t1 = clock();
             int i = 0;
             int last = -1;
             while (huffmanpath[i] != '\0'){
@@ -67,6 +78,9 @@ int main(){
             ReadTxt(dico, dicopath);
             ReadTxt(bin, huffmanpath);
             Decompression(bin, dico, huffmanpath, last + 1);
+            t2 = clock();
+            temps = (float)(t2-t1)/CLOCKS_PER_SEC;
+            printf("temps = %f Seconde(s)\n", temps);
             printf("Votre fichier decompresser se trouve dans le dossier Huffman.\n");
             printf("-----------------------------------------------------------------------------------\n\n");
         }
