@@ -1,0 +1,403 @@
+\hypertarget{compression_8h}{}\doxysection{compression.\+h File Reference}
+\label{compression_8h}\index{compression.h@{compression.h}}
+
+
+Fichier pour les fonctions de compression.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$ \mbox{\hyperlink{compression_8h_a745768722533e9f8a906e3ca4807a171}{A\+V\+L\+To\+List\+Occu}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction pour transformer l\textquotesingle{}A\+VL d\textquotesingle{}occurence en \mbox{\hyperlink{struct_list_node}{List\+Node}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{compression_8h_a6063ffc28a897aa5bec9bce0c58df81b}{Add\+A\+V\+L\+Occurence}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B, char c, int $\ast$change)
+\begin{DoxyCompactList}\small\item\em Fonction pour ajouter une occurence à l\textquotesingle{}A\+VL d\textquotesingle{}occurence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$ \mbox{\hyperlink{compression_8h_a0c248c608c5d8d30d4a25579e0b99b3a}{Creation\+List\+Occurence}} (char $\ast$tab)
+\begin{DoxyCompactList}\small\item\em Fonction qui créer l\textquotesingle{}A\+VL d\textquotesingle{}occurence et renvoie la list d\textquotesingle{}occurence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{compression_8h_aa9232e1ef4e25cf97d4d6c8e07412f64}{Bubble\+Sort}} (\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$$\ast$L)
+\begin{DoxyCompactList}\small\item\em Fonction qui trie dans l\textquotesingle{}ordre croissant une \mbox{\hyperlink{struct_list_node}{List\+Node}} en fonction de leurs occurences. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{compression_8h_a8d97b5d5d98c5aea9f7b99ca2594e2cb}{Creation\+A\+B\+R\+Huffman}} (\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$L)
+\begin{DoxyCompactList}\small\item\em Fonction qui crée l\textquotesingle{}arbre Huffman à partir d\textquotesingle{}une \mbox{\hyperlink{struct_list_node}{List\+Node}} d\textquotesingle{}occurence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_code}{Code}} $\ast$ \mbox{\hyperlink{compression_8h_a0277d6672506bf6400c66e7a235ce2f8}{Letter\+To\+Binary\+Code}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B, char letter, char c)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le nouveau code binaire d\textquotesingle{}une lettre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list_code}{List\+Code}} $\ast$ \mbox{\hyperlink{compression_8h_a868e360dd5b04089d213b78d377c9190}{Tree\+To\+List}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B, \mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$Occu)
+\begin{DoxyCompactList}\small\item\em Fonction qui convertit l\textquotesingle{}A\+VL Dico sous forme d\textquotesingle{}une \mbox{\hyperlink{struct_list_code}{List\+Code}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$ \mbox{\hyperlink{compression_8h_ae7fae71dc9e3fb991805b2aeae740f30}{Add\+A\+V\+L\+Dico}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B, char c, \mbox{\hyperlink{struct_code}{Code}} $\ast$\mbox{\hyperlink{structcode}{code}}, int $\ast$changement)
+\begin{DoxyCompactList}\small\item\em Fonction qui ajoute un caractère et son nouveau code binaire à l\textquotesingle{}A\+VL Dico. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$ \mbox{\hyperlink{compression_8h_a52358978801ef081607fee367d7665a5}{Creation\+A\+V\+L\+Dico}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B, \mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$N)
+\begin{DoxyCompactList}\small\item\em Fonction qui crée l\textquotesingle{}A\+VL Dico. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_code}{Code}} $\ast$ \mbox{\hyperlink{compression_8h_aad14280a73a067ac0d4b6da02dbeb231}{Code\+Compression}} (char c, \mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le nouveau code binaire d\textquotesingle{}un caractère. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{compression_8h_ab9ffd099a1c6b616cdc162dfced4a71d}{Encode\+Text\+A\+VL}} (char $\ast$txt, \mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le nouveau code bianire du texte. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_code}{Code}} $\ast$ \mbox{\hyperlink{compression_8h_a6e819c0fba4e031c9d1b66c04522c6ca}{Dico\+A\+V\+L\+To\+Binary}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui converti l\textquotesingle{}A\+VL Dico sous un list de \mbox{\hyperlink{struct_code}{Code}}. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{compression_8h_a0a258829163240fb47dc0f79df5ae20e}{Encode\+Dico}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le dico sous forme de texte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{compression_8h_ac00f1d1ff928a4ec02d97d93f69a5d4d}{Compression}} (char $\ast$txt, char $\ast$input, int last)
+\begin{DoxyCompactList}\small\item\em Fonction qui compresse un texte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier pour les fonctions de compression. 
+
+\begin{DoxyAuthor}{Author}
+Groupe 2 -\/ R 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{compression_8h_ae7fae71dc9e3fb991805b2aeae740f30}\label{compression_8h_ae7fae71dc9e3fb991805b2aeae740f30}} 
+\index{compression.h@{compression.h}!AddAVLDico@{AddAVLDico}}
+\index{AddAVLDico@{AddAVLDico}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{AddAVLDico()}{AddAVLDico()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node_code}{Node\+Code}}$\ast$ Add\+A\+V\+L\+Dico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B,  }\item[{char}]{c,  }\item[{\mbox{\hyperlink{struct_code}{Code}} $\ast$}]{code,  }\item[{int $\ast$}]{changement }\end{DoxyParamCaption})}
+
+
+
+Fonction qui ajoute un caractère et son nouveau code binaire à l\textquotesingle{}A\+VL Dico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & un pointeur de \mbox{\hyperlink{struct_node}{Node}}, qui contient l\textquotesingle{}A\+VL Dico. \\
+\hline
+{\em est} & un caractère, à ajouter dans l\textquotesingle{}A\+VL Dico. \\
+\hline
+{\em est} & pointeur de \mbox{\hyperlink{struct_code}{Code}}, list qui contient le nouveau code binaire de la lettre. \\
+\hline
+{\em est} & pointeur d\textquotesingle{}entier, qui indique si il y a eu un changement dans l\textquotesingle{}A\+VL Dico au cours de l\textquotesingle{}insertion. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node_code}{NodeCode}} *K = \mbox{\hyperlink{compression_8h_a868e360dd5b04089d213b78d377c9190}{TreeToList}}(B, L);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, qui contient le nouvel A\+VL Dico après l\textquotesingle{}ajout. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{compression_8h_a6063ffc28a897aa5bec9bce0c58df81b}\label{compression_8h_a6063ffc28a897aa5bec9bce0c58df81b}} 
+\index{compression.h@{compression.h}!AddAVLOccurence@{AddAVLOccurence}}
+\index{AddAVLOccurence@{AddAVLOccurence}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{AddAVLOccurence()}{AddAVLOccurence()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Add\+A\+V\+L\+Occurence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B,  }\item[{char}]{c,  }\item[{int $\ast$}]{change }\end{DoxyParamCaption})}
+
+
+
+Fonction pour ajouter une occurence à l\textquotesingle{}A\+VL d\textquotesingle{}occurence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur \mbox{\hyperlink{struct_node}{Node}}, qui contient l\textquotesingle{}A\+VL d\textquotesingle{}occurence. \\
+\hline
+{\em c} & est un caractère, il permet de dire quel caractère a une occurence en plus. \\
+\hline
+{\em change} & est un pointeur d\textquotesingle{}entier, qui défini si il y a eu modification dans l\textquotesingle{}A\+VL et doit être équilibré. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{compression_8h_a6063ffc28a897aa5bec9bce0c58df81b}{AddAVLOccurence}}(B, \textcolor{charliteral}{'c'}, \&1);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}}, qui contient le nouvel A\+VL d\textquotesingle{}occurence. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{compression_8h_a745768722533e9f8a906e3ca4807a171}\label{compression_8h_a745768722533e9f8a906e3ca4807a171}} 
+\index{compression.h@{compression.h}!AVLToListOccu@{AVLToListOccu}}
+\index{AVLToListOccu@{AVLToListOccu}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{AVLToListOccu()}{AVLToListOccu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list_node}{List\+Node}}$\ast$ A\+V\+L\+To\+List\+Occu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction pour transformer l\textquotesingle{}A\+VL d\textquotesingle{}occurence en \mbox{\hyperlink{struct_list_node}{List\+Node}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur \mbox{\hyperlink{struct_node}{Node}} qui contient l\textquotesingle{}A\+VL d\textquotesingle{}occurence. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_list_node}{ListNode}} *L = \mbox{\hyperlink{compression_8h_a745768722533e9f8a906e3ca4807a171}{AVLToListOccu}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_list_node}{List\+Node}}, qui contient le liste d\textquotesingle{}occurence. 
+
+{\ttfamily N\+U\+LL}, si l\textquotesingle{}arbre est vide.
+\end{DoxyReturn}
+Fonction pour transformer l\textquotesingle{}A\+VL d\textquotesingle{}occurence en \mbox{\hyperlink{struct_list_node}{List\+Node}}. \mbox{\Hypertarget{compression_8h_aa9232e1ef4e25cf97d4d6c8e07412f64}\label{compression_8h_aa9232e1ef4e25cf97d4d6c8e07412f64}} 
+\index{compression.h@{compression.h}!BubbleSort@{BubbleSort}}
+\index{BubbleSort@{BubbleSort}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{BubbleSort()}{BubbleSort()}}
+{\footnotesize\ttfamily void Bubble\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$$\ast$}]{L }\end{DoxyParamCaption})}
+
+
+
+Fonction qui trie dans l\textquotesingle{}ordre croissant une \mbox{\hyperlink{struct_list_node}{List\+Node}} en fonction de leurs occurences. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & est un double pointeur de \mbox{\hyperlink{struct_list_node}{List\+Node}}, à trier. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{compression_8h_aa9232e1ef4e25cf97d4d6c8e07412f64}{BubbleSort}}(\&L);}
+\end{DoxyCode}
+\\
+\hline
+\end{DoxyParams}
+Fonction qui trie dans l\textquotesingle{}ordre croissant une \mbox{\hyperlink{struct_list_node}{List\+Node}} en fonction de leurs occurences. \mbox{\Hypertarget{compression_8h_aad14280a73a067ac0d4b6da02dbeb231}\label{compression_8h_aad14280a73a067ac0d4b6da02dbeb231}} 
+\index{compression.h@{compression.h}!CodeCompression@{CodeCompression}}
+\index{CodeCompression@{CodeCompression}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{CodeCompression()}{CodeCompression()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_code}{Code}}$\ast$ Code\+Compression (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le nouveau code binaire d\textquotesingle{}un caractère. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & est un caratère, à convertir en binaire. \\
+\hline
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, qui contient l\textquotesingle{}A\+VL Dico. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_code}{Code}} *C = \mbox{\hyperlink{compression_8h_aad14280a73a067ac0d4b6da02dbeb231}{CodeCompression}}(\textcolor{charliteral}{'a'}, B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_code}{Code}}, qui contient le nouveau code binaire de la lettre.
+\end{DoxyReturn}
+Fonction qui retourne le nouveau code binaire d\textquotesingle{}un caractère. \mbox{\Hypertarget{compression_8h_ac00f1d1ff928a4ec02d97d93f69a5d4d}\label{compression_8h_ac00f1d1ff928a4ec02d97d93f69a5d4d}} 
+\index{compression.h@{compression.h}!Compression@{Compression}}
+\index{Compression@{Compression}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{Compression()}{Compression()}}
+{\footnotesize\ttfamily void Compression (\begin{DoxyParamCaption}\item[{char $\ast$}]{txt,  }\item[{char $\ast$}]{input,  }\item[{int}]{last }\end{DoxyParamCaption})}
+
+
+
+Fonction qui compresse un texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txt} & est un tableau de caratère, contenant le texte à compresser. \\
+\hline
+{\em input} & est un pointeur de caractère, contenant le chemin des fichiers. \\
+\hline
+{\em last} & est un entier, contenant la taille de input. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{compression_8h_ac00f1d1ff928a4ec02d97d93f69a5d4d}{Compression}}(\textcolor{stringliteral}{"{}texte a compresser"{}}, \textcolor{stringliteral}{"{}H:\(\backslash\)\(\backslash\)Huffman\(\backslash\)\(\backslash\)"{}}, 11);}
+\end{DoxyCode}
+\\
+\hline
+\end{DoxyParams}
+Fonction qui compresse un texte. Initialisation
+
+Occurence
+
+Arbre Huffman
+
+Dictionnaire
+
+Encodage texte
+
+Exportation des fichiers\mbox{\Hypertarget{compression_8h_a8d97b5d5d98c5aea9f7b99ca2594e2cb}\label{compression_8h_a8d97b5d5d98c5aea9f7b99ca2594e2cb}} 
+\index{compression.h@{compression.h}!CreationABRHuffman@{CreationABRHuffman}}
+\index{CreationABRHuffman@{CreationABRHuffman}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{CreationABRHuffman()}{CreationABRHuffman()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Creation\+A\+B\+R\+Huffman (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$}]{L }\end{DoxyParamCaption})}
+
+
+
+Fonction qui crée l\textquotesingle{}arbre Huffman à partir d\textquotesingle{}une \mbox{\hyperlink{struct_list_node}{List\+Node}} d\textquotesingle{}occurence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & un pointeur de \mbox{\hyperlink{struct_list_node}{List\+Node}}, à partir de duquel on crée l\textquotesingle{}arbre Huffman. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{compression_8h_a8d97b5d5d98c5aea9f7b99ca2594e2cb}{CreationABRHuffman}}(L);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}}, qui contient l\textquotesingle{}arbre Huffman. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{compression_8h_a52358978801ef081607fee367d7665a5}\label{compression_8h_a52358978801ef081607fee367d7665a5}} 
+\index{compression.h@{compression.h}!CreationAVLDico@{CreationAVLDico}}
+\index{CreationAVLDico@{CreationAVLDico}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{CreationAVLDico()}{CreationAVLDico()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node_code}{Node\+Code}}$\ast$ Creation\+A\+V\+L\+Dico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B,  }\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$}]{N }\end{DoxyParamCaption})}
+
+
+
+Fonction qui crée l\textquotesingle{}A\+VL Dico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, qui contient l\textquotesingle{}arbre Huffman. \\
+\hline
+{\em N} & est un pointeur de \mbox{\hyperlink{struct_list_node}{List\+Node}}, qui contient la liste des caractères à insérer dans l\textquotesingle{}A\+VL Dico. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node_code}{NodeCode}} *K = \mbox{\hyperlink{compression_8h_a52358978801ef081607fee367d7665a5}{CreationAVLDico}}(B, L);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, qui contient l\textquotesingle{}A\+VL Dico final. 
+\end{DoxyReturn}
+Free Le maillon\mbox{\Hypertarget{compression_8h_a0c248c608c5d8d30d4a25579e0b99b3a}\label{compression_8h_a0c248c608c5d8d30d4a25579e0b99b3a}} 
+\index{compression.h@{compression.h}!CreationListOccurence@{CreationListOccurence}}
+\index{CreationListOccurence@{CreationListOccurence}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{CreationListOccurence()}{CreationListOccurence()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list_node}{List\+Node}}$\ast$ Creation\+List\+Occurence (\begin{DoxyParamCaption}\item[{char $\ast$}]{tab }\end{DoxyParamCaption})}
+
+
+
+Fonction qui créer l\textquotesingle{}A\+VL d\textquotesingle{}occurence et renvoie la list d\textquotesingle{}occurence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & est un tableau de caractère, qui contient le texte à traiter. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_list_node}{ListNode}} *B = \mbox{\hyperlink{compression_8h_a0c248c608c5d8d30d4a25579e0b99b3a}{CreationListOccurence}}(txt);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_list_node}{List\+Node}}, qui contient la list des caractères avec leurs occurences. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{compression_8h_a6e819c0fba4e031c9d1b66c04522c6ca}\label{compression_8h_a6e819c0fba4e031c9d1b66c04522c6ca}} 
+\index{compression.h@{compression.h}!DicoAVLToBinary@{DicoAVLToBinary}}
+\index{DicoAVLToBinary@{DicoAVLToBinary}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{DicoAVLToBinary()}{DicoAVLToBinary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_code}{Code}}$\ast$ Dico\+A\+V\+L\+To\+Binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui converti l\textquotesingle{}A\+VL Dico sous un list de \mbox{\hyperlink{struct_code}{Code}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}A\+VL Dico. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_code}{Code}} *C = \mbox{\hyperlink{compression_8h_a6e819c0fba4e031c9d1b66c04522c6ca}{DicoAVLToBinary}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_code}{Code}}, qui contient les lettre avec leur code binaire.
+\end{DoxyReturn}
+Fonction qui converti l\textquotesingle{}A\+VL Dico sous un list de \mbox{\hyperlink{struct_code}{Code}}. \mbox{\Hypertarget{compression_8h_a0a258829163240fb47dc0f79df5ae20e}\label{compression_8h_a0a258829163240fb47dc0f79df5ae20e}} 
+\index{compression.h@{compression.h}!EncodeDico@{EncodeDico}}
+\index{EncodeDico@{EncodeDico}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{EncodeDico()}{EncodeDico()}}
+{\footnotesize\ttfamily char$\ast$ Encode\+Dico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le dico sous forme de texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}A\+VL Dico. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{char} *tab = \mbox{\hyperlink{compression_8h_a0a258829163240fb47dc0f79df5ae20e}{EncodeDico}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un tableau de caratère, contenant le dico. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{compression_8h_ab9ffd099a1c6b616cdc162dfced4a71d}\label{compression_8h_ab9ffd099a1c6b616cdc162dfced4a71d}} 
+\index{compression.h@{compression.h}!EncodeTextAVL@{EncodeTextAVL}}
+\index{EncodeTextAVL@{EncodeTextAVL}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{EncodeTextAVL()}{EncodeTextAVL()}}
+{\footnotesize\ttfamily char$\ast$ Encode\+Text\+A\+VL (\begin{DoxyParamCaption}\item[{char $\ast$}]{txt,  }\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le nouveau code bianire du texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em txt} & est un tableau de caratère, contenant le texte à compresser. \\
+\hline
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}A\+VL Dico. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{char} *tab = \mbox{\hyperlink{compression_8h_ab9ffd099a1c6b616cdc162dfced4a71d}{EncodeTextAVL}}(\textcolor{stringliteral}{"{}la texte à compresser"{}}, B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{compression_8h_a0277d6672506bf6400c66e7a235ce2f8}\label{compression_8h_a0277d6672506bf6400c66e7a235ce2f8}} 
+\index{compression.h@{compression.h}!LetterToBinaryCode@{LetterToBinaryCode}}
+\index{LetterToBinaryCode@{LetterToBinaryCode}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{LetterToBinaryCode()}{LetterToBinaryCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_code}{Code}}$\ast$ Letter\+To\+Binary\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B,  }\item[{char}]{letter,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le nouveau code binaire d\textquotesingle{}une lettre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, qui contient l\textquotesingle{}arbre Huffman \\
+\hline
+{\em letter} & est un caractère, à aller chercher dans l\textquotesingle{}arbre. \\
+\hline
+{\em c} & est un caratère, à insérer dans la struture \mbox{\hyperlink{struct_code}{Code}} à retourner. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_code}{Code}} *C = \mbox{\hyperlink{compression_8h_a0277d6672506bf6400c66e7a235ce2f8}{LetterToBinaryCode}}(L, \textcolor{charliteral}{'a'}, \textcolor{charliteral}{'1'});}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_code}{Code}}, qui contient la chaine de code binaire du la lettre.
+\end{DoxyReturn}
+Fonction qui retourne le nouveau code binaire d\textquotesingle{}une lettre. \mbox{\Hypertarget{compression_8h_a868e360dd5b04089d213b78d377c9190}\label{compression_8h_a868e360dd5b04089d213b78d377c9190}} 
+\index{compression.h@{compression.h}!TreeToList@{TreeToList}}
+\index{TreeToList@{TreeToList}!compression.h@{compression.h}}
+\doxysubsubsection{\texorpdfstring{TreeToList()}{TreeToList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list_code}{List\+Code}}$\ast$ Tree\+To\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B,  }\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$}]{Occu }\end{DoxyParamCaption})}
+
+
+
+Fonction qui convertit l\textquotesingle{}A\+VL Dico sous forme d\textquotesingle{}une \mbox{\hyperlink{struct_list_code}{List\+Code}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est} & un pointeur de \mbox{\hyperlink{struct_node}{Node}}, qui contient l\textquotesingle{}A\+VL Dico. \\
+\hline
+{\em est} & un pointeur de \mbox{\hyperlink{struct_list_node}{List\+Node}}, qui contient les différents lettre du texte à convertir. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_list_code}{ListCode}} *K = \mbox{\hyperlink{compression_8h_a868e360dd5b04089d213b78d377c9190}{TreeToList}}(B, L);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_list_code}{List\+Code}}, qui contient la liste des caractères avec leur nouvel encodage binaire derrière. 
+\end{DoxyReturn}
