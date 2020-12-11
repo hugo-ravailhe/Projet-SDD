@@ -1,0 +1,324 @@
+\hypertarget{_a_v_l_8h}{}\doxysection{Fonctions/\+A\+VL.h File Reference}
+\label{_a_v_l_8h}\index{Fonctions/AVL.h@{Fonctions/AVL.h}}
+
+
+Fichier pour les fonctions d\textquotesingle{}A\+VL.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_a_v_l_8h_acdc91d38c3eb80f07670733e28072526}{Height\+Tree}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne la hauteur de l\textquotesingle{}arbre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_a812fc401434c3b7cfef65f3b6a8ec5e0}{Rotation\+Left}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue un rotation gauche. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_a8e22ef66a089043bb212ac72bb133e9a}{Rotation\+Right}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$D)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue un rotation droite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_a66766ae772d0481bad1f9f1190806cd9}{Rotation\+Right\+Left}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue un rotation droite gauche. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_aea4bf83e6952b3168c3093dbc09b1190}{Rotation\+Left\+Right}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$F)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue un rotation gauche droite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_aef36ec1c3fffb97e8c2ed8d0c23a7664}{Balancing}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue l\textquotesingle{}équilibrage d\textquotesingle{}un A\+VL. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_a_v_l_8h_a6f81ea2c88b24ea0d3e0064f0822cf74}{Height\+Tree\+Code}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne la hauteur de l\textquotesingle{}arbre. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_aff3139fbefedad179af7a2c2a0b1509c}{Rotation\+Left\+Code}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue un rotation gauche. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_a84ef5f541f9dad65fdd0b85b214db69d}{Rotation\+Right\+Code}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$D)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue un rotation droite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_aa4cca227a0f7f9e4aa5d2aa649581ebc}{Rotation\+Right\+Left\+Code}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue un rotation droite gauche. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_a75878fedb706d32f53009d6104b047b5}{Rotation\+Left\+Right\+Code}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$F)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue un rotation gauche droite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$ \mbox{\hyperlink{_a_v_l_8h_aec50de5deee1e21b9d5d556b4f7ea9ee}{Balancing\+Code}} (\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction qui effectue l\textquotesingle{}équilibrage d\textquotesingle{}un A\+VL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier pour les fonctions d\textquotesingle{}A\+VL. 
+
+\begin{DoxyAuthor}{Author}
+Groupe 2 -\/ R 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_a_v_l_8h_aef36ec1c3fffb97e8c2ed8d0c23a7664}\label{_a_v_l_8h_aef36ec1c3fffb97e8c2ed8d0c23a7664}} 
+\index{AVL.h@{AVL.h}!Balancing@{Balancing}}
+\index{Balancing@{Balancing}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{Balancing()}{Balancing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Balancing (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue l\textquotesingle{}équilibrage d\textquotesingle{}un A\+VL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant l\textquotesingle{}A\+VL à équilibrer. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_aef36ec1c3fffb97e8c2ed8d0c23a7664}{Balancing}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant l\textquotesingle{}A\+VL équilibré. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_aec50de5deee1e21b9d5d556b4f7ea9ee}\label{_a_v_l_8h_aec50de5deee1e21b9d5d556b4f7ea9ee}} 
+\index{AVL.h@{AVL.h}!BalancingCode@{BalancingCode}}
+\index{BalancingCode@{BalancingCode}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{BalancingCode()}{BalancingCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node_code}{Node\+Code}}$\ast$ Balancing\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue l\textquotesingle{}équilibrage d\textquotesingle{}un A\+VL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}A\+VL à équilibrer. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_aec50de5deee1e21b9d5d556b4f7ea9ee}{BalancingCode}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant l\textquotesingle{}A\+VL équilibré. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_acdc91d38c3eb80f07670733e28072526}\label{_a_v_l_8h_acdc91d38c3eb80f07670733e28072526}} 
+\index{AVL.h@{AVL.h}!HeightTree@{HeightTree}}
+\index{HeightTree@{HeightTree}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{HeightTree()}{HeightTree()}}
+{\footnotesize\ttfamily int Height\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne la hauteur de l\textquotesingle{}arbre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{int} heigth = \mbox{\hyperlink{_a_v_l_8h_acdc91d38c3eb80f07670733e28072526}{HeightTree}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un entier, qui est la hauteur de l\textquotesingle{}arbre. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_a6f81ea2c88b24ea0d3e0064f0822cf74}\label{_a_v_l_8h_a6f81ea2c88b24ea0d3e0064f0822cf74}} 
+\index{AVL.h@{AVL.h}!HeightTreeCode@{HeightTreeCode}}
+\index{HeightTreeCode@{HeightTreeCode}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{HeightTreeCode()}{HeightTreeCode()}}
+{\footnotesize\ttfamily int Height\+Tree\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne la hauteur de l\textquotesingle{}arbre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{int} heigth = \mbox{\hyperlink{_a_v_l_8h_acdc91d38c3eb80f07670733e28072526}{HeightTree}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un entier, qui est la hauteur de l\textquotesingle{}arbre. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_a812fc401434c3b7cfef65f3b6a8ec5e0}\label{_a_v_l_8h_a812fc401434c3b7cfef65f3b6a8ec5e0}} 
+\index{AVL.h@{AVL.h}!RotationLeft@{RotationLeft}}
+\index{RotationLeft@{RotationLeft}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{RotationLeft()}{RotationLeft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Rotation\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue un rotation gauche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_a812fc401434c3b7cfef65f3b6a8ec5e0}{RotationLeft}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant la rotation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_aff3139fbefedad179af7a2c2a0b1509c}\label{_a_v_l_8h_aff3139fbefedad179af7a2c2a0b1509c}} 
+\index{AVL.h@{AVL.h}!RotationLeftCode@{RotationLeftCode}}
+\index{RotationLeftCode@{RotationLeftCode}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{RotationLeftCode()}{RotationLeftCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node_code}{Node\+Code}}$\ast$ Rotation\+Left\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue un rotation gauche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_aff3139fbefedad179af7a2c2a0b1509c}{RotationLeftCode}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant la rotation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_aea4bf83e6952b3168c3093dbc09b1190}\label{_a_v_l_8h_aea4bf83e6952b3168c3093dbc09b1190}} 
+\index{AVL.h@{AVL.h}!RotationLeftRight@{RotationLeftRight}}
+\index{RotationLeftRight@{RotationLeftRight}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{RotationLeftRight()}{RotationLeftRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Rotation\+Left\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{F }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue un rotation gauche droite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_aea4bf83e6952b3168c3093dbc09b1190}{RotationLeftRight}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant la rotation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_a75878fedb706d32f53009d6104b047b5}\label{_a_v_l_8h_a75878fedb706d32f53009d6104b047b5}} 
+\index{AVL.h@{AVL.h}!RotationLeftRightCode@{RotationLeftRightCode}}
+\index{RotationLeftRightCode@{RotationLeftRightCode}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{RotationLeftRightCode()}{RotationLeftRightCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node_code}{Node\+Code}}$\ast$ Rotation\+Left\+Right\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{F }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue un rotation gauche droite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_a75878fedb706d32f53009d6104b047b5}{RotationLeftRightCode}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant la rotation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_a8e22ef66a089043bb212ac72bb133e9a}\label{_a_v_l_8h_a8e22ef66a089043bb212ac72bb133e9a}} 
+\index{AVL.h@{AVL.h}!RotationRight@{RotationRight}}
+\index{RotationRight@{RotationRight}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{RotationRight()}{RotationRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Rotation\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{D }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue un rotation droite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_a8e22ef66a089043bb212ac72bb133e9a}{RotationRight}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant la rotation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_a84ef5f541f9dad65fdd0b85b214db69d}\label{_a_v_l_8h_a84ef5f541f9dad65fdd0b85b214db69d}} 
+\index{AVL.h@{AVL.h}!RotationRightCode@{RotationRightCode}}
+\index{RotationRightCode@{RotationRightCode}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{RotationRightCode()}{RotationRightCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node_code}{Node\+Code}}$\ast$ Rotation\+Right\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{D }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue un rotation droite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_a84ef5f541f9dad65fdd0b85b214db69d}{RotationRightCode}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant la rotation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_a66766ae772d0481bad1f9f1190806cd9}\label{_a_v_l_8h_a66766ae772d0481bad1f9f1190806cd9}} 
+\index{AVL.h@{AVL.h}!RotationRightLeft@{RotationRightLeft}}
+\index{RotationRightLeft@{RotationRightLeft}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{RotationRightLeft()}{RotationRightLeft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Rotation\+Right\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue un rotation droite gauche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_a66766ae772d0481bad1f9f1190806cd9}{RotationRightLeft}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant la rotation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_a_v_l_8h_aa4cca227a0f7f9e4aa5d2aa649581ebc}\label{_a_v_l_8h_aa4cca227a0f7f9e4aa5d2aa649581ebc}} 
+\index{AVL.h@{AVL.h}!RotationRightLeftCode@{RotationRightLeftCode}}
+\index{RotationRightLeftCode@{RotationRightLeftCode}!AVL.h@{AVL.h}}
+\doxysubsubsection{\texorpdfstring{RotationRightLeftCode()}{RotationRightLeftCode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node_code}{Node\+Code}}$\ast$ Rotation\+Right\+Left\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node_code}{Node\+Code}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction qui effectue un rotation droite gauche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node_code}{Node\+Code}}, contenant l\textquotesingle{}arbre. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{_a_v_l_8h_aa4cca227a0f7f9e4aa5d2aa649581ebc}{RotationRightLeftCode}}(B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant la rotation. 
+\end{DoxyReturn}

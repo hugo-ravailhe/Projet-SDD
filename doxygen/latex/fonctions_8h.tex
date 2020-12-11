@@ -1,0 +1,202 @@
+\hypertarget{fonctions_8h}{}\doxysection{Fonctions/fonctions.h File Reference}
+\label{fonctions_8h}\index{Fonctions/fonctions.h@{Fonctions/fonctions.h}}
+
+
+file for the fonctions.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{fonctions_8h_af3b633ec3cbe4b1ad97a4ae3ec77d60c}{Write\+Txt}} (char $\ast$txt, char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Function to write in a txt file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fonctions_8h_a5a05d19cb8610bf9242f2e5f32ed631f}{get\+\_\+size}} (char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Function to get the file size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fonctions_8h_ab5f6275f0f96664e238e52e3d58f811d}{Read\+Txt}} (char $\ast$txt, char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Function to get the text in a file and put it in txt. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{fonctions_8h_a5d6d4f9ffd6fa5ddb9d1fc9ec3b588d9}{Letter\+To\+Binary}} (char lettre, char $\ast$tab, int length)
+\begin{DoxyCompactList}\small\item\em function that translates a letter into binary and writes it to a text file. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{fonctions_8h_a98ba4de4ec7de92a7b58e0a51cb78d77}{Word\+To\+Binary}} (const char $\ast$text)
+\begin{DoxyCompactList}\small\item\em function that starts the function Letter\+To\+Binary for as many letters as there are in the texte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{fonctions_8h_a9afd8a6d559a06465541ce2c6f99fc1d}{Maximum}} (int a, int b)
+\begin{DoxyCompactList}\small\item\em function that function which calculates the maximum between two integers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$ \mbox{\hyperlink{fonctions_8h_a91faa77d2782d1d75a68279ff5bc02ac}{Recuperation}} (\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$$\ast$L)
+\begin{DoxyCompactList}\small\item\em function that function that removes the first element from a list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$ \mbox{\hyperlink{fonctions_8h_a790f573fdcee3f03e7c687e6965722f8}{Copy\+List\+Node}} (\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$L)
+\begin{DoxyCompactList}\small\item\em function that copies a list. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{fonctions_8h_ad025ecbbd7fe9c9f0673bd0346b13022}{Concatenation}} (const char $\ast$first, int firstlength, const char $\ast$second, int secondlength)
+\begin{DoxyCompactList}\small\item\em Fonction qui concatene deux tableaux de caracteres. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+file for the fonctions. 
+
+\begin{DoxyAuthor}{Author}
+Groupe 2 -\/ R 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fonctions_8h_ad025ecbbd7fe9c9f0673bd0346b13022}\label{fonctions_8h_ad025ecbbd7fe9c9f0673bd0346b13022}} 
+\index{fonctions.h@{fonctions.h}!Concatenation@{Concatenation}}
+\index{Concatenation@{Concatenation}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{Concatenation()}{Concatenation()}}
+{\footnotesize\ttfamily char$\ast$ Concatenation (\begin{DoxyParamCaption}\item[{const char $\ast$}]{first,  }\item[{int}]{firstlength,  }\item[{const char $\ast$}]{second,  }\item[{int}]{secondlength }\end{DoxyParamCaption})}
+
+
+
+Fonction qui concatene deux tableaux de caracteres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & est un tableau, contenant le premier tableau. \\
+\hline
+{\em firstlength} & est un entier, contenant la taille de first. \\
+\hline
+{\em second} & est un tableau, contenant le deuxième tableau. \\
+\hline
+{\em secondlength} & est un entier, contenant la taille de second. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8h_a790f573fdcee3f03e7c687e6965722f8}\label{fonctions_8h_a790f573fdcee3f03e7c687e6965722f8}} 
+\index{fonctions.h@{fonctions.h}!CopyListNode@{CopyListNode}}
+\index{CopyListNode@{CopyListNode}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{CopyListNode()}{CopyListNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list_node}{List\+Node}}$\ast$ Copy\+List\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$}]{L }\end{DoxyParamCaption})}
+
+
+
+function that copies a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & the list used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8h_a5a05d19cb8610bf9242f2e5f32ed631f}\label{fonctions_8h_a5a05d19cb8610bf9242f2e5f32ed631f}} 
+\index{fonctions.h@{fonctions.h}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{get\_size()}{get\_size()}}
+{\footnotesize\ttfamily int get\+\_\+size (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Function to get the file size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & the name of the file you want the size of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the file\textquotesingle{}s size. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8h_a5d6d4f9ffd6fa5ddb9d1fc9ec3b588d9}\label{fonctions_8h_a5d6d4f9ffd6fa5ddb9d1fc9ec3b588d9}} 
+\index{fonctions.h@{fonctions.h}!LetterToBinary@{LetterToBinary}}
+\index{LetterToBinary@{LetterToBinary}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{LetterToBinary()}{LetterToBinary()}}
+{\footnotesize\ttfamily char$\ast$ Letter\+To\+Binary (\begin{DoxyParamCaption}\item[{char}]{lettre,  }\item[{char $\ast$}]{tab,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+function that translates a letter into binary and writes it to a text file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em letter} & the letter translated into binary. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tab with the binary. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8h_a9afd8a6d559a06465541ce2c6f99fc1d}\label{fonctions_8h_a9afd8a6d559a06465541ce2c6f99fc1d}} 
+\index{fonctions.h@{fonctions.h}!Maximum@{Maximum}}
+\index{Maximum@{Maximum}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{Maximum()}{Maximum()}}
+{\footnotesize\ttfamily int Maximum (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+function that function which calculates the maximum between two integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & the first integer. b the second integer. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the maximum. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8h_ab5f6275f0f96664e238e52e3d58f811d}\label{fonctions_8h_ab5f6275f0f96664e238e52e3d58f811d}} 
+\index{fonctions.h@{fonctions.h}!ReadTxt@{ReadTxt}}
+\index{ReadTxt@{ReadTxt}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{ReadTxt()}{ReadTxt()}}
+{\footnotesize\ttfamily void Read\+Txt (\begin{DoxyParamCaption}\item[{char $\ast$}]{txt,  }\item[{char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Function to get the text in a file and put it in txt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the file path. txt\+: the text wich takes the text of the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fonctions_8h_a91faa77d2782d1d75a68279ff5bc02ac}\label{fonctions_8h_a91faa77d2782d1d75a68279ff5bc02ac}} 
+\index{fonctions.h@{fonctions.h}!Recuperation@{Recuperation}}
+\index{Recuperation@{Recuperation}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{Recuperation()}{Recuperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_list_node}{List\+Node}}$\ast$ Recuperation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} $\ast$$\ast$}]{L }\end{DoxyParamCaption})}
+
+
+
+function that function that removes the first element from a list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L} & the list used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the element removed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8h_a98ba4de4ec7de92a7b58e0a51cb78d77}\label{fonctions_8h_a98ba4de4ec7de92a7b58e0a51cb78d77}} 
+\index{fonctions.h@{fonctions.h}!WordToBinary@{WordToBinary}}
+\index{WordToBinary@{WordToBinary}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{WordToBinary()}{WordToBinary()}}
+{\footnotesize\ttfamily char$\ast$ Word\+To\+Binary (\begin{DoxyParamCaption}\item[{const char $\ast$}]{text }\end{DoxyParamCaption})}
+
+
+
+function that starts the function Letter\+To\+Binary for as many letters as there are in the texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & the text you want to translate into binary. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tab. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fonctions_8h_af3b633ec3cbe4b1ad97a4ae3ec77d60c}\label{fonctions_8h_af3b633ec3cbe4b1ad97a4ae3ec77d60c}} 
+\index{fonctions.h@{fonctions.h}!WriteTxt@{WriteTxt}}
+\index{WriteTxt@{WriteTxt}!fonctions.h@{fonctions.h}}
+\doxysubsubsection{\texorpdfstring{WriteTxt()}{WriteTxt()}}
+{\footnotesize\ttfamily void Write\+Txt (\begin{DoxyParamCaption}\item[{char $\ast$}]{txt,  }\item[{char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Function to write in a txt file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the file path. txt\+: the txt written in the file. \\
+\hline
+\end{DoxyParams}
