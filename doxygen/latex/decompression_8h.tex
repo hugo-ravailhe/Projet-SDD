@@ -1,0 +1,156 @@
+\hypertarget{decompression_8h}{}\doxysection{decompression.\+h File Reference}
+\label{decompression_8h}\index{decompression.h@{decompression.h}}
+
+
+Fichier pour les fonctions de decompression.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{decompression_8h_a51c5816b9a573f074836da5055f3d009}{Creation\+Huffman\+Tree\+By\+Dico}} (const char $\ast$dico, int $\ast$i, char c, \mbox{\hyperlink{struct_node}{Node}} $\ast$B)
+\begin{DoxyCompactList}\small\item\em Fonction pour cr{\ucr}er un arbre Huffman {\ucr} partir d\textquotesingle{}un Dico sous forme de texte. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{decompression_8h_a9768f2b9055da1a20a210323a4347a1b}{Decode\+Dico}} (const char $\ast$dico)
+\begin{DoxyCompactList}\small\item\em Fonction qui d{\ucr}code le dico sous forme d\textquotesingle{}un texte en arbre Huffman. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{decompression_8h_a1c6db5348ed300e112902a42a847e03f}{Huffman\+Char}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B, char $\ast$binary, int $\ast$i)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le carat{\ucr}re qui correspond au chemin donn{\ucr} en param{\ucr}tre. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{decompression_8h_a53f8ac8807cd6ab3c462901eabe3f851}{Decode\+Binary}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$B, char $\ast$binary)
+\begin{DoxyCompactList}\small\item\em Fonction qui retourne le texte d{\ucr}coder. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{decompression_8h_ac72e395c85d400d6a8ea49c38b939a8a}{Decompression}} (char $\ast$bin, char $\ast$dico, char $\ast$path, int last)
+\begin{DoxyCompactList}\small\item\em Fonction qui permet de d{\ucr}compresser un texte binaire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier pour les fonctions de decompression. 
+
+\begin{DoxyAuthor}{Author}
+Groupe 2 -\/ R 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{decompression_8h_a51c5816b9a573f074836da5055f3d009}\label{decompression_8h_a51c5816b9a573f074836da5055f3d009}} 
+\index{decompression.h@{decompression.h}!CreationHuffmanTreeByDico@{CreationHuffmanTreeByDico}}
+\index{CreationHuffmanTreeByDico@{CreationHuffmanTreeByDico}!decompression.h@{decompression.h}}
+\doxysubsubsection{\texorpdfstring{CreationHuffmanTreeByDico()}{CreationHuffmanTreeByDico()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Creation\+Huffman\+Tree\+By\+Dico (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dico,  }\item[{int $\ast$}]{i,  }\item[{char}]{c,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B }\end{DoxyParamCaption})}
+
+
+
+Fonction pour cr{\ucr}er un arbre Huffman {\ucr} partir d\textquotesingle{}un Dico sous forme de texte. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dico} & est un tableau de carat{\ucr}res, contenant le dico. \\
+\hline
+{\em i} & est un pointeur d\textquotesingle{}entier, qui indique la position dans le tableau. \\
+\hline
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant le tableau Huffman qui se cr{\ucr}e. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{decompression_8h_a51c5816b9a573f074836da5055f3d009}{CreationHuffmanTreeByDico}}(dico, \&i, letter, B);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un pointeur de \mbox{\hyperlink{struct_node}{Node}} contenant l\textquotesingle{}arbre Huffman.
+\end{DoxyReturn}
+Fonction pour cr{\ucr}er un arbre Huffman {\ucr} partir d\textquotesingle{}un Dico sous forme de texte. \mbox{\Hypertarget{decompression_8h_a53f8ac8807cd6ab3c462901eabe3f851}\label{decompression_8h_a53f8ac8807cd6ab3c462901eabe3f851}} 
+\index{decompression.h@{decompression.h}!DecodeBinary@{DecodeBinary}}
+\index{DecodeBinary@{DecodeBinary}!decompression.h@{decompression.h}}
+\doxysubsubsection{\texorpdfstring{DecodeBinary()}{DecodeBinary()}}
+{\footnotesize\ttfamily char$\ast$ Decode\+Binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B,  }\item[{char $\ast$}]{binary }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le texte d{\ucr}coder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant l\textquotesingle{}arbre Huffman. \\
+\hline
+{\em binary} & un tableau de carat{\ucr}res, contenant le texte {\ucr} d{\ucr}coder. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{char} *txt = \mbox{\hyperlink{decompression_8h_a53f8ac8807cd6ab3c462901eabe3f851}{DecodeBinary}}(B, binary);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{decompression_8h_a9768f2b9055da1a20a210323a4347a1b}\label{decompression_8h_a9768f2b9055da1a20a210323a4347a1b}} 
+\index{decompression.h@{decompression.h}!DecodeDico@{DecodeDico}}
+\index{DecodeDico@{DecodeDico}!decompression.h@{decompression.h}}
+\doxysubsubsection{\texorpdfstring{DecodeDico()}{DecodeDico()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Decode\+Dico (\begin{DoxyParamCaption}\item[{const char $\ast$}]{dico }\end{DoxyParamCaption})}
+
+
+
+Fonction qui d{\ucr}code le dico sous forme d\textquotesingle{}un texte en arbre Huffman. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dico} & est un tableau de carat{\ucr}res, contenant le dico. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{struct_node}{Node}} *B = \mbox{\hyperlink{decompression_8h_a9768f2b9055da1a20a210323a4347a1b}{DecodeDico}}(dico);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{decompression_8h_ac72e395c85d400d6a8ea49c38b939a8a}\label{decompression_8h_ac72e395c85d400d6a8ea49c38b939a8a}} 
+\index{decompression.h@{decompression.h}!Decompression@{Decompression}}
+\index{Decompression@{Decompression}!decompression.h@{decompression.h}}
+\doxysubsubsection{\texorpdfstring{Decompression()}{Decompression()}}
+{\footnotesize\ttfamily void Decompression (\begin{DoxyParamCaption}\item[{char $\ast$}]{bin,  }\item[{char $\ast$}]{dico,  }\item[{char $\ast$}]{path,  }\item[{int}]{last }\end{DoxyParamCaption})}
+
+
+
+Fonction qui permet de d{\ucr}compresser un texte binaire. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bin} & est un tableau de caract{\ucr}res, contenant le texte binaire {\ucr} d{\ucr}compresser. \\
+\hline
+{\em dico} & est un tableau de caract{\ucr}res, contenant le dico de la compression. \\
+\hline
+{\em path} & est un tableau de caracteres, contenant le chemin des fichiers. \\
+\hline
+{\em last} & est un entier, contenant la taille de path. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\mbox{\hyperlink{decompression_8h_ac72e395c85d400d6a8ea49c38b939a8a}{Decompression}}(bin, dico, \textcolor{stringliteral}{"{}H:\(\backslash\)\(\backslash\)Huffman\(\backslash\)\(\backslash\)"{}}, 11);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{decompression_8h_a1c6db5348ed300e112902a42a847e03f}\label{decompression_8h_a1c6db5348ed300e112902a42a847e03f}} 
+\index{decompression.h@{decompression.h}!HuffmanChar@{HuffmanChar}}
+\index{HuffmanChar@{HuffmanChar}!decompression.h@{decompression.h}}
+\doxysubsubsection{\texorpdfstring{HuffmanChar()}{HuffmanChar()}}
+{\footnotesize\ttfamily char Huffman\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{B,  }\item[{char $\ast$}]{binary,  }\item[{int $\ast$}]{i }\end{DoxyParamCaption})}
+
+
+
+Fonction qui retourne le carat{\ucr}re qui correspond au chemin donn{\ucr} en param{\ucr}tre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em B} & est un pointeur de \mbox{\hyperlink{struct_node}{Node}}, contenant l\textquotesingle{}arbre Huffman. \\
+\hline
+{\em binary} & est un tableau de caract{\ucr}res, contenant le texte {\ucr} d{\ucr}coder. \\
+\hline
+{\em i} & est un pointeur d\textquotesingle{}entier, qui indique la position dans le tableau. ~\newline
+ Example \+: 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{char} letter = \mbox{\hyperlink{decompression_8h_a1c6db5348ed300e112902a42a847e03f}{HuffmanChar}}(B, dico, \&i);}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un caract{\ucr}re, associ{\ucr} au chemin. 
+\end{DoxyReturn}
