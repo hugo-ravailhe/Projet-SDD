@@ -163,10 +163,12 @@ char* EncodeDico(NodeCode* B);
 
 /**
  * \brief Fonction qui compresse un texte.
- * param txt est un tableau de caratère, contenant le texte à compresser.
+ * \param txt est un tableau de caratère, contenant le texte à compresser.
+ * \param input est un pointeur de caractère, contenant le chemin des fichiers.
+ * \param last est un entier, contenant la taille de input.
  *         \n Example :
  *         \code{.c}
- *         Compression("texte a compresser");
+ *         Compression("texte a compresser", "H:\\Huffman\\", 11);
  *         \endcode
  */
 void Compression(char* txt, char *input, int last);
